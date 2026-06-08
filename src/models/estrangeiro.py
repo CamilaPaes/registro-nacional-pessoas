@@ -24,3 +24,6 @@ class Estrangeiro(Pessoa):
 
         self.pais_origem = pais_origem
         self.data_validade = data_validade
+
+    def tipo_documento(self):
+        return "Permissão de Residência"

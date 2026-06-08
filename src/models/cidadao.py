@@ -22,3 +22,7 @@ class Cidadao(Pessoa):
         )
 
         self.numero_documento = numero_documento
+
+
+    def tipo_documento(self):
+        return "Documento de Identidade"

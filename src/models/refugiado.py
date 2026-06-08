@@ -24,3 +24,6 @@ class Refugiado(Pessoa):
 
         self.pais_origem = pais_origem
         self.motivo_refugio = motivo_refugio
+
+    def tipo_documento(self):
+        return "Documento de Refúgio"
