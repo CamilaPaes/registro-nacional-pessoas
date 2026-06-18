@@ -157,5 +157,9 @@ Os dados são persistidos localmente em um arquivo SQLite3 (`sistema_registro.db
 ---
 
 ## Autores
+Camila Dayane Paes do Nascimento
+Cláudio Vinicius Coelho Barros
+Leticia Monteiro Taraves
+Mateus Machado Ramos 
 
 Projeto desenvolvido como atividade avaliativa da disciplina de Engenharia de Software.
