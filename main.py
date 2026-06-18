@@ -10,10 +10,11 @@ from src.servicos.revogacao import Revogacao
 from src.servicos.renovacao import Renovacao
 from src.servicos.relatorios import Relatorios
 
-
-print("=================================")
-print("LOGIN")
-print("=================================")
+print("\n========================================")
+print(" SISTEMA DE REGISTRO NACIONAL")
+print("========================================")
+print(" LOGIN")
+print("========================================")
 print("1 - Administrador")
 print("2 - Supervisor")
 print("3 - Funcionário de Registro")
@@ -27,9 +28,11 @@ banco = Banco()  # abre (ou cria) o arquivo sistema_registro.db
 
 while True:
 
-    print("\n===================================")
+    print("\n========================================")
     print(" SISTEMA DE REGISTRO NACIONAL")
-    print("===================================")
+    print("========================================")
+    print(" MENU PRINCIPAL")
+    print("========================================")
     print("1 - Documento de Identidade")
     print("2 - Autorização de Residência")
     print("3 - Autorização de Refúgio")
@@ -90,8 +93,16 @@ while True:
 
         nome = input("Nome: ")
         resultado = Consulta.buscar_por_nome(banco, nome)
-        for item in resultado:
-            print(item)
+
+        print("\n===================================")
+        print(" RESULTADO DA BUSCA")
+        print("===================================")
+
+        if not resultado:
+            print("Nenhum registro encontrado.")
+        else:
+            for item in resultado:
+                print(f"- {item}")
 
     elif opcao == "6":
 

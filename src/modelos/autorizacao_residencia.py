@@ -31,3 +31,11 @@ class AutorizacaoResidencia(Tramite):
     @property
     def data_vencimento(self):
         return self.__data_vencimento
+
+    def __str__(self):
+        return (
+            f"Nome: {self.nome} | "
+            f"Documento: {self.documento} | "
+            f"País: {self.pais_origem} | "
+            f"Vencimento: {self.data_vencimento}"
+        )

@@ -10,3 +10,10 @@ class DocumentoIdentidade(Tramite):
             digital,
             data_emissao
         )
+
+    def __str__(self):
+        return (
+            f"Nome: {self.nome} | "
+            f"Documento: {self.documento} | "
+            f"Emissão: {self.data_emissao}"
+        )

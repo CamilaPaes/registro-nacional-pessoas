@@ -4,7 +4,7 @@ class Cadastro:
     def cadastrar(banco, tramite):
         try:
             banco.inserir(tramite)
-            print("Cadastro realizado com sucesso.")
+            print("\n✔ Cadastro realizado com sucesso!\n")
         except Exception as e:
             # O erro mais comum é documento duplicado (UNIQUE constraint)
             if "UNIQUE" in str(e):
