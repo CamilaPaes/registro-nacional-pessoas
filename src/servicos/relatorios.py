@@ -1,33 +1,24 @@
 class Relatorios:
 
     @staticmethod
-    def quantidade_tramites(banco):
-
-        identidade = 0
-        residencia = 0
-        refugio = 0
-
-        for item in banco.registros:
-
-            if item.__class__.__name__ == "DocumentoIdentidade":
-                identidade += 1
-
-            elif item.__class__.__name__ == "AutorizacaoResidencia":
-                residencia += 1
-
-            elif item.__class__.__name__ == "AutorizacaoRefugio":
-                refugio += 1
-
-        print("\n===== RELATÓRIO =====")
-        print(f"Documentos de Identidade: {identidade}")
-        print(f"Autorizações de Residência: {residencia}")
-        print(f"Autorizações de Refúgio: {refugio}")
-        print(f"Total: {len(banco.registros)}")
+    def listar(banco):
+        registros = banco.listar_todos()
+        print("\n===== REGISTROS =====")
+        if not registros:
+            print("Nenhum registro encontrado.")
+        for pessoa in registros:
+            print(pessoa)
 
     @staticmethod
-    def listar(banco):
+    def quantidade_tramites(banco):
+        contagem = banco.contar_por_tipo()
+        identidade = contagem.get("DocumentoIdentidade", 0)
+        residencia = contagem.get("AutorizacaoResidencia", 0)
+        refugio = contagem.get("AutorizacaoRefugio", 0)
+        total = identidade + residencia + refugio
 
-        print("\n===== REGISTROS =====")
-
-        for pessoa in banco.registros:
-            print(pessoa)
+        print("\n===== RELATÓRIO =====")
+        print(f"Documentos de Identidade:   {identidade}")
+        print(f"Autorizações de Residência: {residencia}")
+        print(f"Autorizações de Refúgio:    {refugio}")
+        print(f"Total:                      {total}")

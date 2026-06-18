@@ -1,8 +1,9 @@
 class Renovacao:
 
     @staticmethod
-    def renovar(tramite, nova_data):
-
-        tramite._Tramite__data_emissao = nova_data
-
-        print("Documento renovado.")
+    def renovar(banco, documento, nova_data):
+        atualizado = banco.atualizar_data_emissao(documento, nova_data)
+        if atualizado:
+            print("Documento renovado com sucesso.")
+        else:
+            print("Documento não encontrado.")

@@ -2,15 +2,8 @@ class Revogacao:
 
     @staticmethod
     def revogar(banco, documento):
-
-        for pessoa in banco.registros:
-
-            if pessoa.documento == documento:
-
-                banco.registros.remove(pessoa)
-
-                print("Documento revogado.")
-
-                return
-
-        print("Documento não encontrado.")
+        removido = banco.remover(documento)
+        if removido:
+            print("Documento revogado com sucesso.")
+        else:
+            print("Documento não encontrado.")
