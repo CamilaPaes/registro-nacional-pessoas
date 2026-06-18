@@ -1,4 +1,4 @@
-from pessoa import Pessoa
+from atores.pessoa import Pessoa
 
 
 class FuncionarioRegistro(Pessoa):
