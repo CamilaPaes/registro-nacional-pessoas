@@ -1,13 +1,8 @@
 ﻿Documento de Requisitos
-
 Sistema de Registro Nacional de Pessoas
-
 Objetivo
-
 O sistema foi desenvolvido para auxiliar no gerenciamento de registros de pessoas, permitindo o cadastro, consulta, renovação e revogação de documentos e autorizações. O sistema funciona em linha de comando e utiliza SQLite3 para armazenamento dos dados.
-
 Requisitos Funcionais
-
 RF01 – Permitir o cadastro de documentos de identidade.
 RF02 – Permitir o cadastro de autorizações de residência.
 RF03 – Permitir o cadastro de autorizações de refúgio.
@@ -18,9 +13,7 @@ RF07 – Permitir a renovação de documentos e autorizações.
 RF08 – Permitir a revogação de documentos e autorizações.
 RF09 – Permitir a geração de relatórios com os registros cadastrados.
 RF10 – Controlar o acesso ao sistema de acordo com o perfil do usuário.
-
 Requisitos Não Funcionais
-
 RNF01 – O sistema deve ser desenvolvido na linguagem Python.
 RNF02 – O sistema deve utilizar SQLite3 para persistência dos dados.
 RNF03 – O sistema deve ser executado em ambiente de linha de comando.
